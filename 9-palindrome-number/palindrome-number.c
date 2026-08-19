@@ -6,15 +6,15 @@ bool isPalindrome(int x) {
         return false;
     }
 
-    int reversedHalf = 0;
+    int revNum = 0;
 
 // Reverse the second half of the digits.
-    while (x > reversedHalf) {
-        reversedHalf = (reversedHalf * 10) + (x % 10);
+    while (x > revNum) {
+        revNum = (revNum * 10) + (x % 10);
         x /= 10;
     }
 
-// For even-length numbers, x == reversedHalf.
-// For odd-length numbers, x == reversedHalf / 10(removes the middle digit.)
-    return x == reversedHalf || x == reversedHalf / 10;
+// For even-length numbers, x == revNum.
+// For odd-length numbers, x == revNum / 10(removes the middle digit.)
+    return x == revNum || x == revNum / 10;
 }
