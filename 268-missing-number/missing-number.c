@@ -14,10 +14,19 @@ int missingNumber(int* nums, int numsSize) {
 
 
     // ****by XOR or Bit Manipulaton method****
-    int xorSum = numsSize;
+     int xorSum = numsSize;
 
-    for (int i=0; i<numsSize; i++) {
-        xorSum ^= i ^ nums[i];
-    }
+     for (int i=0; i<numsSize; i++) {
+       xorSum ^= i ^ nums[i];
+     }
     return xorSum;
+    // int xor1 = 0, xor2 = 0;
+    // int n = numsSize-1;
+    // for (int i = 0; i < n; i++) {
+    //     xor2 = xor2 ^ nums[i];
+    //     xor1 = xor1 ^ (i+1);
+    // }
+   // xor1 = xor1 ^ numsSize;
+
+    //return xor1 ^ xor2;
 }
